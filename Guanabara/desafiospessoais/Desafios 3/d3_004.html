@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D3_004</title>
+</head>
+<body>
+    <h1>Eventos do Mouse</h1>
+    <p>Crie um <code><em>div</em></code> que muda de cor ao passar o mouse sobre ele e volta à cor original quando o mouse sai</p>
+
+    <h2>Exercício</h2>
+    <div id="seuw">Passe aqui</div>
+
+    <script>
+        var ms = document.querySelector('div#seuw')
+        
+        ms.addEventListener('mouseenter', mEntrar)
+        ms.addEventListener('mouseleave', mSair)
+
+        function mEntrar() {
+            ms.style.background = 'rgb(0,170,20)'
+        }
+
+        function mSair() {
+            ms.style.background = 'white'
+        }
+    </script>
+
+</body>
+</html>

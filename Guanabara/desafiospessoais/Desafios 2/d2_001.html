@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D2_001</title>
+</head>
+<body>
+    <h1>Simples cálculos</h1>
+    <script>
+        alert("Crie um programa que pede dois números ao usuário e exibe cinco operações matemáticos diferentes entre eles. Dica: Os operadores que você aprendeu podem te ajudar!")
+        var n1 = Number(prompt("Digite um número:"))
+        var n2 = Number(prompt("Digite outro número:"))
+        var s = n1 + n2
+        var m = n1 * n2
+        var sub = n1 - n2
+        var div = n1 / n2
+        var res = n1 % n2
+        var pot = n1 ** n2
+
+        var div2 = div.toFixed(3)
+        
+        document.write(`A soma é igual a ${s};<br>`)
+        document.write(`A subtração é igual a ${sub};<br>`)
+        document.write(`A multiplicação é igual a ${m};<br>`)
+        document.write(`A divisão com 3 casas decimais é igual a ${div2};<br>`)
+        document.write(`A potenciação é igual a ${pot};<br>`)
+        document.write(`O resto da divisão ${div2} é igual a ${res};<br>`)
+    </script>
+</body>
+</html>

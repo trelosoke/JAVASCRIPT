@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D2_006</title>
+</head>
+<body>
+    <h1>Operadores relacionais</h1>
+    <h2>Sistema de preços: desconto</h2>
+    <script>
+        alert("Construa um sistema de preços com descontos. O usuário deve inserir o valor de um produto e um percentual de desconto, e o programa deve calcular o preço final usando os operadores aritméticos.")
+        var prod = Number(prompt("Insira o valor de algum produto"))
+        var des = Number(prompt("Agora coloque quantos porcento de desconto queres (Número de 1 à 100):"))
+        if(isNaN(prod)||isNaN(des)||des<1||des>100){
+            alert("Erro: desconto invalido. Tente novamente.")
+        } else {
+        var desR = prod * (des / 100)
+        var pFinal = prod - desR
+
+        var prod$ = prod.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+        var desR$ = desR.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+        var pFinal$ = pFinal.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+
+        document.write(`Seu produto, com valor inicial de ${prod$}, tem valor final de ${pFinal$}, com um desconto de ${desR$}.`)
+        }
+    </script>
+</body>
+</html>

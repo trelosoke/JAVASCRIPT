@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D010</title>
+</head>
+<body>
+    <h1>Desafio de Formatação de Moeda</h1>
+    <script>
+        alert("Peça ao usuário um valor numérico. Exiba esse valor formatado como moeda em dólares americanos.")
+        var num = Number(prompt("Qual salário você, pobre e lascado programador, gostaria de ganhar?"))
+        var n$ = num.toLocaleString('en-us', {style: "currency", currency: 'USD'})
+        if(num>=1600){
+            document.write(`${n$}? Porra. Até eu.`)
+        } else {
+            document.write(`${n$} é um salário de merda.`)
+        }
+    </script>
+</body>
+</html>

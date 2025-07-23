@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D2_011</title>
+</head>
+<body>
+    <h1>Operadores lógicos</h1>
+    <h2>Permissão especial</h2>
+    <script>
+        alert("Criar um sistema onde: Um usuário digita sua idade. Ele informa se tem permissão especial (por exemplo, um administrador, moderador etc.).  Se ele atende a pelo menos uma das regras, o sistema permite o acesso. Se não atender a nenhuma das regras, ele não poderá entrar.")
+        var idd = Number(prompt("Digite sua idade:"))
+        if(isNaN(idd) || idd<0){
+            alert("Erro: idade inválida. Tente novamente.")
+        } else {
+        var pwrd = String(prompt("Senha do admnistrador (opcional):"))
+        if(idd>=18||pwrd == "SENHA"){
+            document.write("Bem vindo ao site!")
+        } else {
+            alert("Acesso negado. Tente novamente.")
+            document.write("Acesso negado.")
+        }}
+    </script>
+</body>
+</html>

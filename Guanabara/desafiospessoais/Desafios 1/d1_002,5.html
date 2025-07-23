@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D002,5</title>
+</head>
+<body>
+    <h1>Desafio da Permissão de Idade</h1>
+    <script>
+        alert("Solicite a idade do usuário. Permita a entrada no site se ele tiver 18 anos para cima. Caso não, não permita.")
+        var idd = Number(prompt("Qual a sua idade?"))
+        if(idd>=18){
+            document.write("Bem-vindo ao site!")
+        } else {
+            alert(`${idd} anos? Vai estudar, moleque.`)
+        }
+    </script>
+</body>
+</html>

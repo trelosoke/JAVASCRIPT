@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D3_013</title>
+</head>
+<body>
+    <h1>Mudança por ID e Classe</h1>
+    <p>Crie três <code><em>div</em></code>'s com classes diferentes e um com ID. Alterne entre modificar por classe e por ID ao clicar em um botão.</p>
+
+    <h2>Exercício</h2>
+
+    <div id="sim">Pode ser que sim.</div>
+    <div class="a">Eis 'A'.</div>
+    <div class="b">Eis 'B'.</div>
+    <div class="c">Ex 'C'</div>
+    <button id="btt">Mudar</button>
+
+    <script>
+        var btt = document.querySelector('button#btt')
+        var estado = 0
+
+        var Ss = document.querySelector('div#sim')
+        var clsA = document.querySelector('div.a')
+        var clsB = document.querySelector('div.b')
+        var clsC = document.querySelector('div.c')
+
+        var txOSs = Ss.innerHTML
+        var txOA = clsA.innerHTML
+        var txOB = clsB.innerHTML
+        var txOC = clsC.innerHTML
+
+        btt.addEventListener('click', function(){
+            if(estado === 0){
+                Ss.innerHTML = 'Pode não.'
+                estado = 1
+            } else if (estado === 1){
+                clsA.innerHTML = 'Eis que.'
+                estado = 2
+            } else if (estado === 2){
+                clsB.innerHTML = 'Eis a cá, BB.'
+                estado = 3
+            } else if (estado === 3){
+                clsC.innerHTML = 'Eis cki!'
+                estado = 4
+            } else {
+                Ss.innerHTML = txOSs
+                clsA.innerHTML = txOA
+                clsB.innerHTML = txOB
+                clsC.innerHTML = txOC
+                estado = 0
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D006</title>
+</head>
+<body>
+    <h1>Desafio da Substituição de Frase</h1>
+    <script>
+        alert("Solicite ao usuário uma frase. Peça que ele escolha uma palavra da frase para ser substituída por outra. Exiba a frase com a substituição feita corretamente.")
+        var frs1 = String(prompt("Escreva uma frase qualquer:"))
+        var pal1 = String(prompt("Digite uma palavra da frase para ser substituída:"))
+        var pal2 = String(prompt("Agora escreva a palavra que irá substituí-la:"))
+        var frs2 = frs1.replace(pal1, pal2)
+        document.write(`Frase original: ${frs1}<br>`)
+        document.write(`Frase modificada: ${frs2}`)
+
+    </script>
+</body>
+</html>

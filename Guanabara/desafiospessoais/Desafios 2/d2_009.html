@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D2_009</title>
+</head>
+<body>
+    <h1>Operadores relacionais</h1>
+    <h2>Desafio final: Autenticação básica</h2>
+    <script>
+        alert("Crie um sistema de autenticação básico. O usuário deve inserir um nome e uma senha. Se o nome e a senha forem iguais aos valores esperados, exiba “Login bem-sucedido”, senão, exiba “Acesso negado”.")
+        var log1 = String(prompt("Cadastro: insira seu nome de usuário:"))
+        var pwrd1 = String(prompt("Escolha uma senha"))
+
+        localStorage.setItem("logSv", log1)
+        localStorage.setItem("pwrdSv", pwrd1)
+
+        alert("Cadastro finalizado! Faça seu login.")
+
+        var log2 = String(prompt("Nome de usuário:"))
+        var pwrd2 = String(prompt("Senha:"))
+
+        var logSv = localStorage.getItem("logSv")
+        var pwrdSv = localStorage.getItem("pwrdSv")
+
+        if(log2 === logSv && pwrd2 === pwrdSv){
+            document.write("Bem-vindo ao site!")
+        } else {
+            alert("Credenciais não coincidem. Tente novamente.")
+            document.write("Acesso negado.")
+        }
+       </script>
+</body>
+</html>

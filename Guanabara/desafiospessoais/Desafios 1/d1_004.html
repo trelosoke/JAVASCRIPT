@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D004</title>
+</head>
+<body>
+    <h1>Desafio de Contagem de Caracteres</h1>
+    <script>
+      alert("Solicite ao usuário uma frase. Conte quantos caracteres ela possui. Mostre esse número, ignorando espaços em branco.")
+      var frs = String(prompt("Digite uma frase qualquer:"))
+      var fSE = frs.replace(/\s/g, "")
+      var flgth = fSE.length
+      document.write(`A sua frase tem ${flgth} caracteres.`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D3_002</title>
+</head>
+<body>
+    <h1>Alterando Texto com Eventos</h1>
+    <p>Crie um <code><em>div</em></code> com um texto inicial e mude o texto para "Novo conteúdo!" ao clicar nele.</p>
+
+    <h2>Exercício</h2>
+    <div id="more" onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()">Aqui é muito legal, clique!</div>
+
+    <script>
+        var clk = document.querySelector('div#more')
+        
+        function entrar(){
+            clk.innerText = 'Clica não :('
+        }
+
+        function clicar(){
+            clk.innerText = 'AHHHHHHHHHHHHHHHHHHHHHHHHHHH'
+        }
+
+        function sair(){
+            clk.innerText = 'Obg!'
+        }
+    </script>
+</body>
+</html>

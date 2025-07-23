@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão JavaScript</title>
+</head>
+<body>
+    <h1>Revisão de JavaScript</h1>
+    <p>Bem-vindo! Este site tem como finalidade ser usado para treinar o que sei de java script até agora.</p>
+    <script>
+        var num1 = Number.parseFloat(window.prompt("Digite um número aqui").replace(",", "."))
+        var num2 = Number.parseFloat(window.prompt("Digite outro número").replace(",", "."))
+        var s = num1 + num2
+        window.alert(`A soma entre ${num1} e ${num2} é igual a ${s}`)
+    </script>
+    <h2>Explicação</h2>serve como 
+    <p>A <strong>Variável</strong> <code><em>(var)</em></code> funciona como um contêiner. Ao utilizar <code><em>var id (identificador) = valor</em></code>, você está dizendo que <code><em>id</em></code> tem esse <code><em>valor</em></code>.</p>
+    <p>Caso eu queira pedir que o usúario escreva 2 números ao entrar no site e que esses números se somem, deve-se tratar a variável como número, não como string. Pois, quando ocorrer <code><em>var s = num1 + num2</em></code>, o <code><em>+</em></code> poderia ser utilizado tanto para <strong>adição</strong>, quanto para <strong>concatenação</strong>. Logo, identidicar as variáveis que irão se somar como número ("Number(n)" ou Numer.parseFloat(n) / Number.parseInt()) ou como string (String(n) ou n.toString()) </p>
+    <h2>Formatando String</h2>
+    <p>O uso do string com a variável pode ter 2 versões. A primeira como, por exemplo:</p>
+    <pre>
+        <code><em>
+var s = 'JavaScript'
+'Eu estou aprendendo' + s
+        </em></code>
+    </pre>
+    E a segunda como:
+    <pre>
+        <code><em>
+var s = 'JavaScript'
+`Eu estou aprendendo ${s}`
+        </em></code>
+    </pre>
+    Que éum modo muito mais fácil, pois se usa o placeholder (<code><em>${}</em></code>)
+    
+    <p>Aqui vão algumas outras formatações:</p>
+    <ul>
+        <li><code>s.length</code> (contar os caracteres do string)</li>
+        <li><code>s.toUpperCase()</code> (colocar tudo em letras maiusculas)</li>
+        <li><code>s.toLowerCase()</code> (colocar tudo em letras minúsculas)</li> 
+    </ul>
+
+    <h2>Formatando números</h2>
+
+    <p>Caso a sua variável seja algum número (Number), pode se formatar das seguintes formas:</p>
+    
+    <ol>
+        <li>Adicionar mais casas decimais
+            <pre>
+                <code><em>
+var n1 = 1543.5
+n1.toFixed(2)
+1543.50
+                </em></code>
+            </pre>
+        </li>
+        <li>Adaptar a formatação de dinheiro para a moeda de algum país específico
+            <pre>
+                <code><em>
+n1.toLocalString('pt-br', {style: 'currency', currency: 'BRL'})
+                </em></code>
+            </pre>
+        </li>
+    </ol>
+    <h2>Condições</h2>
+    <p>Também aprendi sobre condicionais: <code><em>if / else</em></code>. Por exemplo, se eu quero que uma caixa de texto apareça dizendo "Número inválido" quando a resposta de um prompt não for um número, posso fazer:</p>
+    <pre>
+        <code>
+var num = Number(prompt("Digite um número"))
+if(isNaN(num)) {
+    alert("Número inválido")
+} else {}
+        </code>
+    </pre>
+    <p>Ou, caso eu queira fazer com que o código funcione caso uma variável seja maior que a outra:</p>
+    <pre>
+        <code>
+var idd = Number(prompt("Digite sua idade"))
+if(idd >= 18) {
+    document.write("Bem-vindo ao site!")
+} else {
+    alert("Acesso negado")
+    document.write("Site proibido para menores de 18 anos.")
+}
+        </code>
+    </pre>
+    <p>Entre outras questões. Tudo que envolver condições. P.S.: Copilot, coloque nos desafios somente o que eu coloquei aqui de condicionais. O básico do básico. Foque nos operadores.</p>
+    <h2>Operadores</h2>
+    <p>Os operadores irão indicar cálculo. O estudo dos operadores que realizei envolvem 5:</p>
+    <h3>Aritméticos</h3>
+    <p>Contas matemáticas básicas.</p>
+    <ul>
+        <li><code>2 + 2</code>(Adição)</li>
+        <li><code>2 - 1</code>(Subtração)</li>
+        <li><code>2 * 2</code>(Multiplicação)</li>
+        <li><code>4 / 2</code>(Divisão)</li>
+        <li><code>4 % 2</code>(Resto de uma divisão)</li>
+        <li><code>4 ** 2</code>(Potenciação)</li>
+    </ul>
+    <p>Caso trabalhar com uma expressão, deve=se sempre utilizar essa ordem de resolução:</p>
+    <ol>
+        <li><code>()</code></li>
+        <li><code>**</code></li>
+        <li><code>%; /; *</code></li>
+        <li><code>+; -</code></li>
+    </ol>
+    <h3>Atribuição: simples</h3>
+    <p>É o que atribui valor a uma variável (<code><em>=</em></code>). Exemplo:</p>
+    <pre>
+        <code>
+var a = 10
+var b = 10 + a
+var c = b * a
+var d = c - 10
+var e = d / 2
+var f = e % 3
+var g = f ** a
+        </code>
+    </pre>
+    <h3>Atribuição: auto-atribuição</h3>
+    <p>Há também como atribuir outro valor à variável. Basta usar os operadores aritméticos para somar, subtrair, multiplicar, dividir, ver o resto da divisão ou potenciar. Ex:</p>
+    <pre>
+        <code>
+var n1 = 20
+n1 = n1 + 20
+        </code>
+    </pre>
+    <p>Porém, é possível simplificar esse cálculo como apenas:</p>
+    <pre>
+        <code>
+var n1 = 20
+n1 += 20
+        </code>
+    </pre>
+    <p>E para somar ou diminuir somente 1 no valor:</p>
+    <pre>
+        <code>
+var n1 = 20
+n1++ //ou ++n1 //Me explique a diferença, Copilot.
+        </code>
+    </pre>
+    <h3>Relacionais</h3>
+    <p>Todos aqueles que buscam estabelecer uma relação binária e verificar o resultado booleano (<code><em>true, false</em></code>). Seus resultados serão: <code><em>true</em></code> ou <code><em>false</em></code>.</p>
+    <h4>Operadores</h4>
+    <ul>
+        <li><code>&gt;</code>(Maior que)</li>
+        <li><code>&lt;</code>(Menor que)</li>
+        <li><code>&gt;=</code>(Maior ou igual a)</li>
+        <li><code>&lt;=</code>(Menor ou igual a)</li>
+        <li><code>==</code>(Igual a)</li>
+        <li><code>!=</code>(Diferente de)</li>
+    </ul>
+    <h3>Relacionais de identidade</h3>
+    <p>O operador <code><em>==</em></code> analisa se o um valor é igual a outro. Porém, caso a operação seja <code><em>5 == '5'</em></code>, o valor também dará <code><em>true</em></code>, pois o esse operador não analisa os tipos de dados. Para tal, temos esse outro operador, que pode até ser usado com <code><em>!=</em></code>:</p>
+    <pre>
+        <code>
+5 === '5'
+false
+//para dizer que um número é diferente que outro:
+var n1 = 10
+var n2 = '10'
+n1 != n2
+//Seria false
+
+//Porém e se eu escrever assim?
+var n1 = 10
+var n2 = '10'
+n1 !== 10
+//Seria true
+        </code>
+    </pre>
+    <h3>Lógicos</h3>
+    <p>Temos 3 tipos:</p>
+    <ul>
+        <li><code>!</code>(Negação)
+        <li><code>&&</code>(Operador "E" binário. Serve para condição binária, que só se torna verdade quando os 2 valores são <code><em>true</em></code>)</li></li>
+        <li><code>||</code>(Operador "OU" binário. Serve para condição binária que se torna true caso uma das condições sejam true)</li> 
+    </ul>
+    <p>A ordem de cálculo para Operadores (Aritméticos > Relacionais > Lógicos>); para os lógicos (! > && > ||).</p>
+    <h3>Ternário</h3>
+    <p>Tem o objetivo de testar uma variável e determinar um valor caso ela seja falsa ou verdadeira. Exemplo:</p>
+    <pre>
+        <code>
+var media = 5.5
+media>=7?true:false // caso media >= 7, o valor true será usador. Caso não, o valor false.
+media>=7?"Aprovado":"Reprovado"
+        </code>
+    </pre>
+</body>
+</html>

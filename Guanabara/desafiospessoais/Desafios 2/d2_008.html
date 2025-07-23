@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D2_008</title>
+</head>
+<body>
+    <h1>Operadores relacionais</h1>
+    <h2>Comparação de números</h2>
+    <script>
+        alert("Compare dois números digitados pelo usuário e informe qual é maior, menor ou se são iguais.")
+        var n1 = Number(prompt("Digite um número:"))
+        var n2 = Number(prompt("Digite outro número:"))
+        if(isNaN(n1) || isNaN(n2)){
+            alert("Números inválidos. Tente novamente.")
+        } else {
+            if(n1>n2){
+                document.write(`O número ${n1} é maior que ${n2}.<br>`)
+            } else if(n1<n2) {
+                document.write(`O número ${n2} é maior que ${n1}.<br>`)
+            } else {
+                document.write(`Os números ${n1} e ${n2} são iguais.<br>`)
+            }
+        }
+    </script>
+</body>
+</html>

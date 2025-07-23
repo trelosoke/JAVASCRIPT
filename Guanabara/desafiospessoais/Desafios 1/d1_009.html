@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <title>JavaScript: D009</title>
+</head>
+<body>
+    <h1>Desafio da Formatação de Número</h1>
+    <script>
+        alert("Solicite ao usuário um número decimal. Mostre esse número com duas casas decimais. Exiba também ele formatado como moeda brasileira.")
+        var dec = Number(prompt("Qual o salário que você, programador, quer ter?"))
+        var dec2 = dec.toFixed(2)
+        var d$ = dec.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+        if(dec>=8000){
+            document.write(`${d$}... Eu também, colega.`)
+        } else {
+            document.write(`${d$} é uma merreca do carai, mermão. Queira mais!`)
+        }
+    </script>
+</body>
+</html>

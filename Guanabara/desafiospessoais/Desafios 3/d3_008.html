@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D3_008</title>
+</head>
+<body>
+    <h1>Contador de Cliques</h1>
+    <p>Faça um contador que aumenta toda vez que o usuário clica em um botão.</p>
+
+    <h2>Exercício</h2>
+
+    <div id="cont">0</div>
+    <button id="clk">Clique</button>
+
+    <script>
+        var cont = 1
+        var clk = document.querySelector('button#clk')
+        var num = document.querySelector('div#cont')
+
+        clk.addEventListener('click', function() {
+            num.innerText = cont++
+        })
+    </script>
+</body>
+</html>

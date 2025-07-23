@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D3_014</title>
+</head>
+<body>
+    <h1>Soma Reforçada</h1>
+    <p>Crie três <code><em>input</em></code>s e um botão de soma. Quando pressionado, deve somar os três números e mostrar o resultado. Se algum <code><em>input</em></code> estiver vazio ou tiver um valor inválido (como texto ou símbolos), deve aparecer uma mensagem de erro informando que a entrada é inválida.</p>
+    
+    <h2>Exercício</h2>
+
+    <input type="number" name="tx1" id="tx1">+
+    <input type="number" name="tx2" id="tx2">+
+    <input type="number" name="tx3" id="tx3">=
+    <button id="btt">Somar</button>
+    <div id="res"></div>
+
+    <script>
+        var btt = document.querySelector('button#btt')
+
+        btt.addEventListener('click', function(){
+            var n1 = document.querySelector('input#tx1')
+            var n2 = document.querySelector('input#tx2')
+            var n3 = document.querySelector('input#tx3')
+
+            var soma = Number(n1.value) + Number(n2.value) + Number(n3.value)
+            var res = document.querySelector('div#res')
+
+            if(n1.value === '' || n2.value === '' || n3.value === ''){
+                alert('Algum input vazio. Por favor, escreva um número.')
+            } else {
+
+            res.innerHTML = `A soma é de ${soma}`
+            }
+        })
+        
+    </script>
+</body>
+</html>

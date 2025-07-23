@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript:D2_013</title>
+</head>
+<body>
+    <h1>Operadores ternários</h1>
+    <h2>Verificação de nota</h2>
+    <script>
+        alert("Verifique a nota do usuário. Se for maior ou igual a 7, exiba 'Aprovado'; caso contrário, 'Reprovado'.")
+        var nota = Number(prompt("Qual foi sua melhor nota das matérias esse bimestre/trimestre?").replace(",", "."))
+        var nota2 = nota.toFixed(1)
+        if(isNaN(nota) || nota<0 || nota>10){
+            alert("Nota inválida. Por favor, tente novamente.")
+        } else {
+        var ntPss = nota2>=7?"Aprovado":"Reprovado"
+        document.write(`Sua nota foi ${nota2}: ${ntPss}.`)
+        }
+    </script>
+</body>
+</html>

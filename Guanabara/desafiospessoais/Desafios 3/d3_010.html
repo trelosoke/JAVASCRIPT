@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: D3_010</title>
+</head>
+<body>
+    <h1>Criando Mensagens Interativas</h1>
+    <p>Ao clicar em um <code><em>div</em></code>, exiba uma mensagem dentro dele, como "Você clicou aqui!".</p>
+
+    <h2>Exercício</h2>
+    <div id="clk">Clique aqui</div>
+
+    <script>
+        var clk = document.querySelector('div#clk')
+
+        clk.addEventListener('click', function() {
+            clk.innerText = 'Você clicou!'
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+body {
+    background-color: royalblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+
+section {
+    background-color: white;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 20px 2px;
+    border: 2px solid black;
+}
+
+article#art1 {
+    margin: 20px;
+}
+
+button {
+    margin: 0px 10px 0px 10px;
+}
+
+article#art2{
+    margin-left: 20px;
+}
+
+select {
+    font-size: 0.8em;
+}
