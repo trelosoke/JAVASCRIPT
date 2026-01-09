@@ -4,12 +4,12 @@
     alert('World')
     //Aqui, o JS interpreta a quebra de linha como um ; implicito. Isso é chamado de "automatic semicolon insertion".
 
-    //Há casos em que a quebra de linha não represenda semicolon:
+    //Há casos em que a quebra de linha não representa semicolon:
     alert(3 +
     1
     + 2); //Retorna 6
 
-    //O JS pode não interpretar muito bem a quebra de linha como semicolon:
+    //O JS também pode não interpretar muito bem a quebra de linha como semicolon:
     alert("Hello");
     [1, 2].forEach(alert);
         //Sem o semicolon no primeiro alert:
