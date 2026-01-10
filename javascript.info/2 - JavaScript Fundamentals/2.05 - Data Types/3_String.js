@@ -1,19 +1,22 @@
-'use strict'
-let str = "Aspas duplas";
-let str2 = 'e aspas únicas são a mesma coisa';
-let phrase = `pode incorporar outra ${str}`;
+"use strict";
+//String
+    //Uma string no JavaScript deve estar entre aspas:
+    let str = 'string'; //Aspas únicas
+    let str2 = "string 2"; //Aspas duplas
+    let str3 = `string 3`; //Acentos graves ` também contam, mas fazem algo em particular.
 
-//Incorporado
-let nome = 'Eduardo';
+    //As aspas duplas e únicas não têm praticamente nenhuma diferença prática. Já o acento grave tem "funcionalidade extendida". Elas nos permitem incorporar variáveis e expressões em uma string envolvendo-as em "${}". Por exemplo:
+    let nome = 'João';
 
-console.log(`Meu nome é ${nome}!`);
-console.log('Meu nome é ' + nome, '!')
+    console.log(`Olá, ${nome}!`); //Olá, João!
 
-//Incorporado com uma expressão
-let n = 4;
-console.log(`o resultado é ${2 + n}`);
+    console.log(`O resultado é ${2 + 3}`); //5
 
-//String é tudo, seja nada, uma letra, uma palavra ou quantos caractéres quiser
-let nada = '';
-let letra = "a";
-let palavra = "GIASFCLFUBREHBER";
+    //A expressão dentro de ${} é avaliada e o resultado se torna parte da string. Podemos chamar ${} de "string interpolation", pois insere valores dentre da estrutura string.
+
+        //comentário
+          //Não há um tipo apenas para caracteres.
+            //Em algumas linguagens, há tipos de dados somente para caracteres isolados, como somente "a" ou "b". No JS, não existe. Uma string pode estar:
+            let strVazia = " "; //vazia;
+            let strLetra = " a "; //apenas com um caractere;
+            let strMany = " Olá, como vai você? " //Vários caracteres

@@ -1,15 +1,28 @@
 'use strict';
-let n = 10;
-n = 11;
+//Números
+    let num = 123;
+    num = 12.345; //No JS, os número decimais são separados por pontos, não vírgulas
 
-//operadores
-let divisao = (n + 2);
-console.log(divisao);
+    //O tipo "número" representa tanto números inteiros quanto decimais (chamados de floating point numbers).
 
-//Valores numéricos especiais
-console.log(1 / 0); //Infinito, maior que qualquer número
-console.log(Infinity); //Infinito
+    //Há muitas operações que podem ser realizadas, como multiplicação "*", divisão "/", soma "+", subtração "-" e por aí vai.
 
-console.log('not a number' / 2); //NotaNumber(NaN)
-console.log(NaN + 1); //Qualquer operação com NaN quase sempre retorna NaN
-console.log(NaN ** 0); //Exceto nesse caso, pois qualquer coisa, mesmo que um não número, for elevada a 0, sempre resultará em "1"
+    //Além dor números comuns, há os chamados "valores numéricos especiais" (special numeric values) que tambpem pertencem à esse tipo de dado: Infinity, -Infinity e NaN (Not a Number).
+
+        //Infinity
+        //Podemos conseguir isso ao fazer uma divisão por zero ou só o referenciando diretamente:
+        console.log(1/0);
+        console.log(Infinity);
+
+        //NaN
+        //Representa um erro computacional. É o resultado de uma operação matemática incorreta ou indefinida. Por exemplo:
+        console.log('not a number' / 2); //Resulta NaN
+
+        //Qualquer operação que contenha NaN em algum lugar, não importa onde, resulta em NaN:
+        console.log(3 + 10 - 5 / NaN);
+        console.log(2 + NaN + 3);
+        //A única excessão é na operação abaixo:
+        console.log(NaN ** 0 == 1); //Retorna verdadeiro (true). '**' significa "elevado a".
+
+            //comentário
+            //Operações matemáticas no JS são seguras. Dividir por zero não vai crashar o seu IDE ou computador. No máximo, resulta em Infinity ou NaN.

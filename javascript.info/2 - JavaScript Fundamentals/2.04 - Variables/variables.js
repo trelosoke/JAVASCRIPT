@@ -154,7 +154,7 @@
     //Quando utilizar maiúsculas ou minúsculas?
         //Valores de constantes que já são conhecidos antes mesmo da execução do script (chamados "hard-coded values") devem ser utilizadas sempre maiúsculas.
         //Valores de constantes que dependem do script rodar para ele ser determinado devem seguir o padrão de nome das variáveis normais. Exemplo:
-        const pageLoadTime = 10; /* tempo levado até uma página carregar */
+        const pageLoadTime = someCode(); /* tempo levado até uma página carregar */
         //Isso depende de cada loading der página. Logo, não tem tempo determinado antes da execução.
 
 //Nomeie as coisas corretamente
