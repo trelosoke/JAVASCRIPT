@@ -9,9 +9,6 @@ let admin;
 let nome;
 
 nome = 'John';
-
 admin = nome;
 
-console.log(admin)
-
-name
+console.log(admin);
