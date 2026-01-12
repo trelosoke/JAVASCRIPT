@@ -3,7 +3,10 @@
 
 let a = 2;
 
-let x = 1 + (a *= 2); // a = 4; x = 5;
+let x = 1 + (a *= 2);
 
-console.log(a)
-console.log(x)
+// a = 4
+// x = 5
+
+console.log(a);
+console.log(x);
