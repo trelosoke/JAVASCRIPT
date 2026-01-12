@@ -1,4 +1,3 @@
 'use strict';
-let userName = prompt('Qual teu nome?')
-
-alert(`Bem-vindo, ${userName}!`)
+let nome = prompt('Qual o seu nome?');
+alert(`Seu nome é ${nome}.`);
