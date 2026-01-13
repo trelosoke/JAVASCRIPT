@@ -9,12 +9,13 @@ in alert:
 
 In this task we assume that the input is always a number. 
 */
-let number = +prompt('Número');
 
-if(number > 0){
+let number = +prompt('Digite qualquer número', '');
+
+if (number > 0) {
     alert(1);
-} else if(number < 0){
+} else if (number < 0) {
     alert(-1);
-} else if(number == 0){
+} else if (number == 0) {
     alert(0);
 }

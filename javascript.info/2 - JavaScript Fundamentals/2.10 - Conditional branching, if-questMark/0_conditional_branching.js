@@ -1,0 +1,2 @@
+'use strict';
+//Algumas vezes, necessitamos performar ações baseadas em diferentes condições. Para tal, utilizamos a declaração "if" e o operador de condição "?", também chamado de operador "question mark (interrogação)"  
