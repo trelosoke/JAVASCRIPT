@@ -1,29 +1,34 @@
 'use strict';
-/*
-Write the code which asks for a login with prompt.
+// Write the code which asks for a login with prompt.
 
-If the visitor enters "Admin", then prompt for a password, if the input is an empty line or Esc – show “Canceled”, if it’s another string – then show “I don’t know you”.
+// If the visitor enters "Admin", then prompt for a password, if the input is an empty line or Esc – show “Canceled”, if it’s another string – then show “I don’t know you”.
 
-The password is checked as follows:
+// The password is checked as follows:
 
-If it equals “TheMaster”, then show “Welcome!”,
-Another string – show “Wrong password”,
-For an empty string or cancelled input, show “Canceled”
-*/
+// If it equals “TheMaster”, then show “Welcome!”,
+// Another string – show “Wrong password”,
+// For an empty string or cancelled input, show “Canceled”
 
-let userName = prompt('Login');
+// Please use nested if blocks. Mind the overall readability of the code.
 
-if(userName == 'Admin'){
-    let pssword = prompt('Senha');
-    if(pssword == 'TheMaster'){
+// Hint: passing an empty input to a prompt returns an empty string ''. Pressing ESC during a prompt returns null.
+
+let login = prompt('Login', '');
+let password;
+
+if (login == 'Admin'){
+    password = prompt('Senha', '');
+    
+    if (password == 'TheMaster'){
         alert('Bem-vindo');
-    } else if(pssword == '' || pssword == null){
+    } else if (password == '' || password == null) {
         alert('Cancelado');
-    } else if(pssword != 'TheMaster'){
-        alert('Senha errada');
+    } else {
+        alert('Senha incorreta');
     }
-} else if(userName == '' || userName == null){
+    
+} else if (login == '' || login == null) {
     alert('Cancelado');
-} else if(userName != 'Admin'){
-    alert('Login não reconhecido.')
+} else {
+    alert("Não te conheço");
 }
