@@ -29,7 +29,7 @@
     console.log(1 && 2 && 3); //3
 
             //Precedência de && é maior do que ||
-                //Então o códico a && b || c && d é essencialmente o mesmo como se as expressões AND estivessem entre parênteses:
+                //Então o código 'a && b || c && d' é essencialmente o mesmo como se as expressões AND estivessem entre parênteses:
                 //(a && b) || (c && d)
 
             //Não substitua "if" por "||" ou "&&"

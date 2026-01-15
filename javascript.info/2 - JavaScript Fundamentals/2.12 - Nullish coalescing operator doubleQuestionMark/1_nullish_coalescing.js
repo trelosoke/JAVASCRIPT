@@ -13,7 +13,7 @@
 
     //Em outras palavras, '??' retorna o primeiro argumento se não for null/undefined. Caso contrário, retorna o segundo.
 
-    //O nullsh coalescing operator não é algo completamente novo. É só uma boa sintaxe para obter o primeiro valor "definido" de dois.
+    //O nullish coalescing operator não é algo completamente novo. É só uma boa sintaxe para obter o primeiro valor "definido" de dois.
 
     //Podemos reescrever 'result = a ?? b' usando os operadores que já conhecemos, como esse:
     let result;
