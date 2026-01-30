@@ -55,7 +55,7 @@
     //Algumas vezes faz sentido atribuir valores padrão para parâmetros em um estágio mais tardio depois da 'declaration' de função.
     //Podemos checar se o parâmetro é passado durante a execução da função comparando-a com 'undefined', exatamente do jeito dos exemplos acima de códigos antigos. Ou usando o operador OR (||), da mesma maneira dos exemplos acima.
 
-    //Engines (motores) do JavaScript moderno suportam o operador de coalescência nula (nullish coalescing operator) '??', que seve ser utilizado somente quando se quer considerar valores falsy, tal como o 0, normais:
+    //Engines (motores) do JavaScript moderno suportam o operador de coalescência nula (nullish coalescing operator) '??', que deve ser utilizado somente quando se quer considerar valores falsy, tal como o 0, normais:
     function mostrarContagem(contagem) {
         //Se 'contagem' é 'undefined' ou 'null', mostra 'desconhecido'
         console.log(contagem ?? 'desconhecido');

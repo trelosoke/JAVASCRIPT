@@ -1,7 +1,7 @@
 'use strict';
 //Expressões de função (Function Expression)
 
-    //No JavaScript, uma função não é apenas uma "estrutura de linguagem mágica". Algumas linguagens lançadas mais antigamente não permitem atribuir funções à variáveis, chamar uma função dentro de outra e manipular funções (só com mecanismos extras). Ou seja, a função só é declarada e chamada.
+    //No JavaScript, uma função não é apenas uma "estrutura de linguagem mágica". Algumas linguagens lançadas mais antigamente não permitem atribuir funções à variáveis, chamar uma função dentro de outra ou manipular funções (só com mecanismos extras). Ou seja, a função só é declarada e chamada.
     //No JS, não. A função é um tipo especial de valor.
 
     //A sintaxe que usamos anteriormente é chamada de 'declaration' de função (ou identificação de função, mas para vias mais práticas, pode ser declaração de função):

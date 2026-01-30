@@ -8,11 +8,11 @@
 
     console.log( digaOla ); //exibe o código da função
 
-    //Por favor note que a última linha não executa a fnunção, pois não há parênteses após 'digaOla'. Há linguagens que qualquer menção ao nome das funções irá executá-la. No JavaScript não.
+    //Por favor note que a última linha não executa a fnunção, pois não há parênteses após 'digaOla'. Há linguagens que qualquer menção ao nome das funções irá executá-la. No JavaScript, não.
 
     //No JS, uma função é um valor, então podemos lidar com ele como um. O código acima mostra sua representação em string, que é o código-fonte. No node.js (saída), a execução resulta em "[Function: digaOla]". Em navegadores, provavelmente viria a escrita do código inteiro (palavra-chave, identificador e corpo da função).
 
-    //Certamente, uma função é um valor especial, no sentido de que podemos chamá-lo como 'digaOla()'. Mas ainda é um valor. Então podemos trabalhar como ele como com outros tipos de valores.
+    //Certamente, uma função é um valor especial, no sentido de que podemos chamá-lo como 'digaOla()'. Mas ainda é um valor. Então podemos trabalhar com ele como com outros tipos de valores.
     //Podemos copiar uma função para outra variável:
     function sayHi() {
         console.log('Hello'); //(1) cria

@@ -15,7 +15,7 @@
 
         //A diferença mais sutil é quando uma função é criada pelo motor (engine) do JavaScript
 
-        // ! -- A Function Expression é criada quando quando a execução a alcança e é utilizável apenas a partir daquele momento.
+        // ! -- A Function Expression é criada quando a execução a alcança e é utilizável apenas a partir daquele momento.
 
         //Uma vez que o fluxo da execução passa para o lado direito da atribuição 'let soma = function...', lá vamos nós, a função é criada e pode ser usada desse momento em diante (atribuição, chamada, etc);
 
@@ -83,9 +83,9 @@
                 console.log("Saudações!");
             }
         }
-        //A função continua visível de todo o lugar, mas somente dentro do bloco. Ela pode ser chamada em qualquer lugar, desde que esteja no mesmo escopo da qual se encontra.
+        //A função continua visível de todo o lugar, mas somente dentro do bloco. Ela pode ser chamada em qualquer lugar, desde que esteja no mesmo escopo do qual se encontra.
 
-        //welcome(); não funcionaria
+        //bemvindo(); não funcionaria
 
         //Para conseguir utilizar os valores das funções dentro do bloco, basta a atribuirmos para uma variável de escopo mais externo ao que as funções estão, fazendo uma expressão de função:
         let bemvindo;

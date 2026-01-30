@@ -1,5 +1,5 @@
 'use strict';
-//Função 'Callback' ou de resposta
+//Funções 'Callback' ou de resposta
     //Vamos dar uma olhada em mais exemplos de passar funções como valores e usar expressão de função.
 
     //Escreveremos uma função 'perguntar(pergunta, sim, nao)' com três parâmetros:
@@ -30,7 +30,7 @@
 
     //Os argumentos 'exibirOk' e 'exibirCancelar' de 'perguntar' são chamados de funções 'callback' ou só 'callbacks'. Em português seria mais ou menos funções de resposta, mas vamos com os termos em inglês. O importante é entender como ela funciona.
 
-    //A ideia é que passemos uma função e esperemo-as serem "chamadas de volta (called back)" depois se for necessário. Em nosso caso, exibirOk torna-se o 'callback' do parâmetro 'sim', e exibirCancelar do parâmetro 'não'.
+    //A ideia é que passemos uma função e as esperemos serem "chamadas de volta (called back)" depois se for necessário. Em nosso caso, exibirOk torna-se o 'callback' do parâmetro 'sim', e exibirCancelar do parâmetro 'não'.
 
     //Podemos usar Expressões de Função para escrever uma função curta equivalente:
     function ask(question, yes, no) {

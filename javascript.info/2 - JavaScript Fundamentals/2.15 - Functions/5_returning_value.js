@@ -42,14 +42,14 @@
                     //Se uma função não retorna um valor, é o mesmo que ela retornar 'undefined':
                     function fazNada() { /*vazio*/ }
 
-                    console.log(fazNada() === undefined);
+                    console.log(fazNada() === undefined); //true
 
                     //Um return vazio também é o mesmo que 'return undefined':
                     function fazNadaMesmo() {
                         return;
                     }
 
-                    console.log(fazNadaMesmo() === undefined);
+                    console.log(fazNadaMesmo() === undefined); //true
 
                 //! - Nunca adicione uma linha entre 'return' e seu valor
                     //Para uma expressão maior dentro de 'return', pode ser tentador colocá-la em uma linha separada, assim:
