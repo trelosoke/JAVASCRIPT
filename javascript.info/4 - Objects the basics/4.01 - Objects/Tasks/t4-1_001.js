@@ -1,16 +1,20 @@
 'use strict';
-// Write the code, one line for each action:
+//Write the code, one line for each action:
 
 // Create an empty object user.
 // Add the property name with the value John.
 // Add the property surname with the value Smith.
 // Change the value of the name to Pete.
 // Remove the property name from the object.
+// solution
 
-let object = {};
+let user = {};
 
-object.name = 'John';
-object.surname = 'Smith';
+user.name = 'John';
+user.surname = 'Smith';
 
-object.name = 'Pete';
-delete object.name;
+user.name = 'Pete';
+
+delete user.name;
+
+console.log(user);
