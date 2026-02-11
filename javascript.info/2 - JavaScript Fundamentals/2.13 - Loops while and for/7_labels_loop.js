@@ -45,7 +45,7 @@
     // outer:
     // for (let i = 0; i < 3; i++) {...}
 
-    //A diretiva 'continue' também pode ser usada como label. Nesse caso, a execução do código pula para a próxima iteração do loop rotulado.
+    //O comando 'continue' também pode ser usada como label. Nesse caso, a execução do código pula para a próxima iteração do loop rotulado.
 
             //Labels não permitem "pular" para qualquer lugar
                 //Labels só permitem nós utilizá-las com break e com continue dentro de loops:

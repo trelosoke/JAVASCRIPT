@@ -1,8 +1,7 @@
 'use strict';
 //Quebrando o loop (breaking the loop)
     //Normalmente, um loop sai quando sua condição torna-se 'falsy'. 
-    //Mas podemos forçar a saída a qualquer momento usando a 'diretiva' especial "break".
-            //Diretiva, em suma, é um comando de controle de fluxo do código. 'break' é uma, pois controla o fluxo, nesse caso, do loop. Onde ele parará.
+    //Mas podemos forçar a saída a qualquer momento usando o comando especial "break".
 
     //Por exemplo, o loop abaixo pede ao usuário por uma série de números, "quebrando (breaking)" quando nenhum número é inserido:
     let soma = 0;
@@ -17,6 +16,6 @@
 
     console.log(`Soma: ${soma}`);
 
-    //A diretiva 'break' é ativada na linha (*) se o usuário inserir uma string vazia ou cancelar o input.Para o loop imediatamente, passando controle para a primeira linha após o loop. Nomeadamente, console.log.
+    //O comando 'break' é ativada na linha (*) se o usuário inserir uma string vazia ou cancelar o input.Para o loop imediatamente, passando controle para a primeira linha após o loop. Nomeadamente, console.log.
 
     //A combinação "loop infinito + 'break' quando precisar" é ótima para situações quando uma condição de um loop deve estar verificada não no início ou fim do loop, mas no meio ou até em vários lugares de seu corpo.
