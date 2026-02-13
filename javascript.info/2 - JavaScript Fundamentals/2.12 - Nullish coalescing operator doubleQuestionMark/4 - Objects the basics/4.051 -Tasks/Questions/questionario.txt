@@ -1,0 +1,117 @@
+📘 Questionário – Capítulo 4.01 (Objects)
+O que diferencia objetos de tipos primitivos em JavaScript?
+
+Quais são as duas formas de criar um objeto vazio?
+
+Explique a diferença entre dot notation e bracket notation.
+
+O que são propriedades computadas e como funcionam?
+
+O que significa “property value shorthand”?
+
+Há restrições para nomes de propriedades em objetos? Explique.
+
+Qual a diferença entre usar delete obj.prop e atribuir undefined a uma propriedade?
+
+Como o operador in funciona e em que casos é mais útil que comparar com undefined?
+
+Explique como o loop for..in percorre propriedades de um objeto.
+
+Como funciona a ordenação de propriedades numéricas versus não numéricas em objetos?
+
+📘 Questionário – Capítulo 4.02 (Object references and copying)
+Qual a diferença entre copiar um valor primitivo e copiar um objeto?
+
+O que significa dizer que objetos são armazenados “por referência”?
+
+Se duas variáveis apontam para o mesmo objeto, o que acontece ao modificar uma propriedade?
+
+Objetos criados com const podem ser modificados? Explique.
+
+O que é uma shallow copy e como pode ser feita em JavaScript?
+
+O que é uma deep copy e por que ela é necessária em alguns casos?
+
+Explique como funciona o método Object.assign.
+
+Qual a diferença entre Object.assign e structuredClone?
+
+O que acontece ao tentar clonar um objeto com funções usando structuredClone?
+
+Cite uma biblioteca popular que oferece clonagem profunda.
+
+📘 Questionário – Capítulo 4.03 (Garbage collection)
+O que é garbage collection em JavaScript?
+
+Explique o conceito de reachability.
+
+O que são “roots” no contexto da coleta de lixo?
+
+O que acontece quando uma variável que referencia um objeto é definida como null?
+
+Explique o exemplo de objetos interligados (husband e wife) e como se tornam inacessíveis.
+
+O que é uma “ilha de objetos” e como ela pode ser removida da memória?
+
+Descreva o funcionamento básico do algoritmo mark-and-sweep.
+
+Quais são algumas otimizações modernas usadas pelos motores JavaScript para coleta de lixo?
+
+Por que não é possível forçar manualmente a execução do garbage collector?
+
+Qual a diferença entre “referenciado” e “acessível”?
+
+📘 Questionário – Capítulo 4.04 (Object methods, "this")
+O que é um método em um objeto?
+
+Qual a diferença entre declarar uma função fora do objeto e atribuí-la como método depois?
+
+O que significa OOP e como objetos se relacionam com esse paradigma?
+
+Explique a sintaxe abreviada de métodos em objetos.
+
+O que é o this em JavaScript e como seu valor é determinado?
+
+Por que usar this é mais confiável do que referenciar diretamente o nome do objeto?
+
+O que acontece se chamarmos uma função que usa this fora de qualquer objeto, em modo estrito?
+
+Qual é o valor de this em modo não estrito quando uma função é chamada sem objeto?
+
+Como arrow functions lidam com this?
+
+Explique a diferença entre obj.f() e f() em relação ao valor de this.
+
+📘 Questionário – Capítulo 4.05 (Constructor, operator "new")
+Qual a principal vantagem de usar funções construtoras em vez de literais {...}?
+
+Quais convenções devem ser seguidas ao criar uma função construtora?
+
+O que acontece internamente quando uma função é chamada com new?
+
+O que é new.target e para que serve?
+
+É possível chamar uma função construtora sem new? O que acontece?
+
+O que acontece se uma função construtora retornar explicitamente um objeto?
+
+E se retornar um valor primitivo?
+
+É permitido omitir parênteses ao usar new?
+
+Como adicionar métodos diretamente dentro de uma função construtora?
+
+Cite exemplos de objetos internos do JavaScript que usam construtores.
+
+📘 Questionário – Capítulo 4.06 (Mesclando conceitos)
+Explique como o uso de structuredClone pode ser útil em objetos criados por construtores.
+
+O que acontece se clonarmos superficialmente (Object.assign) um objeto que contém métodos com this?
+
+Como o garbage collector lida com objetos criados por construtores quando não há mais referências a eles?
+
+Qual a diferença entre copiar uma referência de objeto criado com new e criar um clone profundo dele?
+
+Como arrow functions dentro de construtores interagem com o this herdado?
+
+Dê um exemplo de situação em que métodos de objetos e referências se combinam para causar comportamento inesperado.

@@ -1,0 +1,17 @@
+'use strict';
+//Descreva em pseudocódigo como funciona o algoritmo mark-and-sweep.
+
+function garbageCollection() {
+    para cada objeto acessível a partir das raízes {
+        marcar objeto como alcançável;
+        seguir todas as suas referências e marcá-las;
+    }
+
+    para cada objeto na memoria {
+        se o objeto não estiver marcado {
+            liberar objeto da memória;
+        } senão {
+            desmarcar objeto (para a próxima execução);
+        }
+    }
+}
