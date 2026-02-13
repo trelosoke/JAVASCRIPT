@@ -9,7 +9,7 @@ let settings = {
     }
 };
 
-let clone = Object.assign(settings);
+let clone = Object.assign({}, settings);
 console.log(clone);
 
 settings.resolution.width = 200;
