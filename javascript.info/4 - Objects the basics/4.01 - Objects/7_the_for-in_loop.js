@@ -4,8 +4,8 @@
     //A sintaxe:
     
     /*
-    for (chave in objeto) {
-        //Executa o corpo para cada chave ao decorrer das propriedades do objeto
+    for (propriedade in objeto) {
+        //Executa o corpo para cada propriedade ao decorrer das propriedades do objeto
     }
     */
 
@@ -17,10 +17,10 @@
     };
 
     for (let chave in user) {
-        //Chaves
+        //Propriedades
         console.log(chave); //name, age, isAdmin
 
-        //Valor das chaves
+        //Valor das propriedades
         console.log(user[chave]); //John, 30, true
     }
 
@@ -28,7 +28,7 @@
     //Também poderíamos utilizar outro nome de variável ao invés de 'chave' ou 'key'. Por exemplo, "for (let prop in obj)" também é amplamente usado.
 
 //Ordenado como um objeto
-    //Objetos são ordenados? Em outras palavras, caso iteremos (fizermos um loop) sobre um objeto, nós obtemos todas as propriedades nas mesma ordem em que foram adicionadas? Podemos confiar nisso?
+    //Objetos são ordenados? Em outras palavras, caso iteremos (fizermos um loop) sobre um objeto, nós obtemos todas as propriedades na mesma ordem em que foram adicionadas? Podemos confiar nisso?
 
     //A resposta curta é: "ordenadas de uma maneira especial": propriedades inteiras são armazenadas, outras aparecem por ordem de criação. Os detalhes estão a seguir.
 
@@ -56,7 +56,7 @@
                 //Propriedades inteiras? O que é isso?
                     //O termo "propriedade inteira" aqui significa uma string que pode ser convertida de e para um inteiro sem mudar.
 
-                    //Então "49" é um nome de propriedade inteiro, pois quando é transformado para um número inteiro e vice-versa, continua o mesmo. Mas "+49" e "1.2" não são:
+                    //Então "49" é um nome de propriedade inteira, pois quando é transformado para um número inteiro e vice-versa, continua o mesmo. Mas "+49" e "1.2" não são:
                     //Number(...) explicitamente convertem para um número
                     //Math.trunc é uma função 'build-in' que remove a parte decimal.
                     console.log(String(Math.trunc(Number("49")))); //"49", o mesmo, propriedade inteira.

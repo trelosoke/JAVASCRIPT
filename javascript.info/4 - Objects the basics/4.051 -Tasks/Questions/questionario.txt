@@ -1,63 +1,95 @@
 📘 Questionário – Capítulo 4.01 (Objects)
 O que diferencia objetos de tipos primitivos em JavaScript?
+    Os tipos primitivos trabalham com um valor único simples. São imutáveis (quando se usa um método, um novo é criado), são armazenados em stock memory (mais leve e rápida) e não permitem criar seus métodos próprios, mas sim pré-definidos pela linguagens. Os objetos são mutáveis. Qualquer propriedade pode ser alterada diretamente (obj.name = "treloso") realmente muda o objeto. Pode conter inúmeros valores de vários tipos, são armazenados em heap memory (mais flexível, mas mais pesada) e são manipulados por referência, ou seja, duas variáveis podem apontar para um mesmo objeto, sem criar outro na memória.
 
 Quais são as duas formas de criar um objeto vazio?
+    Um é o modo "constructor" (new Object()), o outro é o modo "literal" (let object = {};).
 
 Explique a diferença entre dot notation e bracket notation.
+    O dot notation permite acessar as propriedades dentro dos objetos (objeto.propriedade). Porém ele não consegue identificar propriedades com nomes em 'string', como propriedades espaçadas. Para tal, a notação de colchete (bracket notation) é utilizada (objeto["propriedade string"]).
 
 O que são propriedades computadas e como funcionam?
+    Propriedades computadas são colchetes utilizados em nomes de propriedades de objetos (chamados 'chaves') que permitem adicionar variáveis externas em seu nome. Por exemplo, uma variável externa "let fruta = 'banana';" poderia ser adicionada nesse nome: "{[fruta]: 2}" --> {banana: 2};
+    
 
 O que significa “property value shorthand”?
+    É uma abreviação para quando o nome e o valor de uma propriedade são a mesma coisa. O mesmo que "{nome: nome}", ou "{idade: idade}".
 
 Há restrições para nomes de propriedades em objetos? Explique.
+    Há apenas uma restrição, sendo ela o uso de '__proto__'. Todas as chaves dos objetos são transformadas em strings, então não há problema em utilizar palavras reservadas da linguagem (digo que a linguagem permite, não que deva ser utilizado). Mas quando se fala em '__proto__', é algo que quando chamado com dot notation com de colchete, entra em 'prototypes' de objetos, que é um assunto posterior.
 
 Qual a diferença entre usar delete obj.prop e atribuir undefined a uma propriedade?
+    Deletar propriedades no geral fazem que ela seja '== undefined'. Isso acontece com qualquer propriedade que não exista no objeto. Porém, ao atribuir 'undefined' em uma propriedade existente faz com que ela ainda retorne undefined, mas ela existe. Para verificar se essa propriedade realmente existe, pode-se usar o operador 'in'.
 
 Como o operador in funciona e em que casos é mais útil que comparar com undefined?
+    Ele verifica se existe propriedade 'x' dentro do objeto 'y'. Ela é mais útil em condições de condicionais, para verificar se há uma propriedade específica no objeto, ou em loop (for...in), para iterar conforme existir propriedades no objeto.
 
 Explique como o loop for..in percorre propriedades de um objeto.
+    Depende de como está organizado os parênteses do loop, mas normalmente o loop avalia se o objeto tem propriedades. Tendo-as, ele vai atravessar cada propriedade e cabe ao corpo da função decidir o que fazer. É possível manipular todos os dados (chaves, valores).
 
 Como funciona a ordenação de propriedades numéricas versus não numéricas em objetos?
+    A ordenação desse tipo é um tanto curiosa. Basicamente, existem 'propriedades inteiras', sendo elas strings que podem ser convertidas para números e vice-versa sem alterar seu valor. Então '49' viraria 49. Mas '+49' ou '1.2', não, pois não é inteiro. O ponto é que, essas propriedades inteiras seguem a ordem crescente (a partir do 1). Logo, a ordem das propriedades viria desse jeito. Basta fazê-los não inteiros para seguir a ordem de criação.
 
 📘 Questionário – Capítulo 4.02 (Object references and copying)
 Qual a diferença entre copiar um valor primitivo e copiar um objeto?
+    Ao fazer uma cópia de um valor primitivo (como de 'let number = 1;'), na verdade é criado um novo valor que armazena a variável 'number'. Com essa nova cópia, não é possível transformar o valor da variável original através da cópia, pois cada variável tem seu espaço único na memória. É simplesmente atribuir o valor de 'number' para uma outra variável.
+
+    Já com objetos, esse tipo de cópia não é possível, pois um objeto é alcançado por referência. Muitas variáveis igualadas a um objeto só não vai criar várias cópias, mas sim apontar para o mesmo objeto. Prova disso é que ao mudar as propriedades do objeto em qualquer que seja a variável, irá alterar os do original. Para cópias de objetos há regras específicas.
 
 O que significa dizer que objetos são armazenados “por referência”?
+    Que cada objeto é único na memória e, portanto, variáveis não guardam o valor do objeto, mas apontam para ele. Isso possibilita muitas variáveis apontarem para um objeto só.
 
 Se duas variáveis apontam para o mesmo objeto, o que acontece ao modificar uma propriedade?
+    Ambas sofrerão mudança, pois é o mesmo objeto, não uma cópia.
 
 Objetos criados com const podem ser modificados? Explique.
+    Sim. Nesse caso, o que 'const' considera como constante é a referência para o mesmo objeto. Então os valores internos dos objetos podem ser alterados, porém o objeto tem que ser o mesmo.
 
 O que é uma shallow copy e como pode ser feita em JavaScript?
+    Shallow copy é uma cópia superficial de um objeto. Isso quer dizer que apenas o primeiro nível das propriedades podem ser copiadas de forma correta. Se houver outros objetos aninhados dentro das propriedades, não serão copiados. Isso pode ser feito com o método 'Object.assign(target, source)'.
 
 O que é uma deep copy e por que ela é necessária em alguns casos?
+    A deep copy é um método que é utilizado quando há objetos aninhados nas propriedades, permitindo a cópia total dos conteúdos. Mas há uma limitação: funções.
 
 Explique como funciona o método Object.assign.
+    O 'Object.assign' usa dois parâmetros: "target", sendo o objeto no qual a cópia irá ficar (geralmente um objeto vazio), e "sources", podendo ser vários objetos diferentes os quais as propriedades serão copiadas todas para o objeto "target".
 
 Qual a diferença entre Object.assign e structuredClone?
+    O primeiro não permite a cópia de propriedades aninhadas. Já o segundo, permite, mas com a limitação de funções.
 
 O que acontece ao tentar clonar um objeto com funções usando structuredClone?
+    Retorna um erro, pois o algoritmo que faz o structred clone não suporta funções, já que elas não são somente dados, mas também códigos executáveis. É uma entidade muito complexa para esse algoritmo.
 
 Cite uma biblioteca popular que oferece clonagem profunda.
+    A biblioteca 'Lodash'.
 
 📘 Questionário – Capítulo 4.03 (Garbage collection)
 O que é garbage collection em JavaScript?
+    É um algoritmo que faz otimizações na execução do código através da exclusão de objetos.
 
 Explique o conceito de reachability.
+    É basicamente o que é 'alcançável' no código. Tudo aquilo que é acessível a partir dos 'roots'.
 
 O que são “roots” no contexto da coleta de lixo?
+    São valores sempre acessíveis, que servem como base para avaliar o alcance de objetos. Alguns exemplos são: variáveis globais, funções em execução e suas variáveis locais, funções globais.
 
 O que acontece quando uma variável que referencia um objeto é definida como null?
+    Dependendo do contexto, caso essa seja a sua única referência, o objeto é denominado como "unreachable (inalcançável)". Ou seja, objeto é excluído da memória pelo garbage collection, pois ele não tem mais nenhuma referência.
 
 Explique o exemplo de objetos interligados (husband e wife) e como se tornam inacessíveis.
+    Feito.
 
 O que é uma “ilha de objetos” e como ela pode ser removida da memória?
 
+
 Descreva o funcionamento básico do algoritmo mark-and-sweep.
+
 
 Quais são algumas otimizações modernas usadas pelos motores JavaScript para coleta de lixo?
 
+
 Por que não é possível forçar manualmente a execução do garbage collector?
+
 
 Qual a diferença entre “referenciado” e “acessível”?
 
@@ -69,8 +101,10 @@ Qual a diferença entre declarar uma função fora do objeto e atribuí-la como 
 O que significa OOP e como objetos se relacionam com esse paradigma?
 
 Explique a sintaxe abreviada de métodos em objetos.
+    {func: function() {iaujjsdpçalsfd}} {func() {}}
 
 O que é o this em JavaScript e como seu valor é determinado?
+
 
 Por que usar this é mais confiável do que referenciar diretamente o nome do objeto?
 
@@ -102,6 +136,7 @@ E se retornar um valor primitivo?
 Como adicionar métodos diretamente dentro de uma função construtora?
 
 Cite exemplos de objetos internos do JavaScript que usam construtores.
+
 
 📘 Questionário – Capítulo 4.06 (Mesclando conceitos)
 Explique como o uso de structuredClone pode ser útil em objetos criados por construtores.

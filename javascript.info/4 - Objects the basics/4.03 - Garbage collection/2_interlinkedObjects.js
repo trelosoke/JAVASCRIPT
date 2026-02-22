@@ -7,7 +7,7 @@
 
         return {
             pai: homem,
-            mae: mulher
+            mae: mulher,
         }
     }
 
