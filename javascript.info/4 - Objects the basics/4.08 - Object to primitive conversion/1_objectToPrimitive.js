@@ -18,4 +18,4 @@
     //Temos dois propósitos:
         //1. Irá nos permitir entender o que está acontecendo em casos de erros de código, quando tal operação acontece acidentalmente.
 
-        //2. Há excessões, quando essas operações são possível e ficam boas. P.ex. subtraindo ou comparando datas (objetos 'Date'). Nós as encontraremos mais tarde, em outro tópico (Date and time).
+        //2. Há excessões, quando essas operações são possíveis e ficam boas. P.ex. subtraindo ou comparando datas (objetos 'Date'). Nós as encontraremos mais tarde, em outro tópico (Date and time).
