@@ -11,7 +11,7 @@
     function BigUser() {
         this.name = "John";
 
-        return {name: "Godzilla"} // <-- retorna esse objeto
+        return {name: "Godzilla"}; // <-- retorna esse objeto
     }
 
     console.log(new BigUser().name); //Godzilla
