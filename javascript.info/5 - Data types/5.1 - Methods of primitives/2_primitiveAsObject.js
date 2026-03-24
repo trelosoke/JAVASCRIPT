@@ -36,7 +36,7 @@
 
                 
                 //!!- Construtores 'String/Number/Boolean' são para uso interno apenas
-                    //Algumas linguagens como Java nos permite criar explicitamente "wrapper objects (objetos que envolvem)" para primitivos usando uma sintaxe como 'new Number(1)' ou 'new Boolean(false)'.
+                    //Algumas linguagens como Java nos permitem criar explicitamente "wrapper objects (objetos que envolvem)" para primitivos usando uma sintaxe como 'new Number(1)' ou 'new Boolean(false)'.
 
                     //No JavaScript, isso também é possível por razôes históricas, mas fortemente NÃO RECOMENDADO. As coisas vão ficar doidas em muitos lugares.
 
