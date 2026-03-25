@@ -26,9 +26,9 @@
         console.log((0.1+0.2).toString(2)); //0.0100110011001100110011001100110011001100110011001101
 
 
-        //O que é 0.1? É 1 dividido por 10 (1/10), um décimo, no sistema numérico decimal, tais números são facilmente representáveis. Compare isso com um terço: 1/3. Se torna uma fração infinita 0.333333... x 3);
+        //O que é 0.1? É 1 dividido por 10 (1/10), um décimo, no sistema numérico decimal tais números são facilmente representáveis. Compare isso com um terço: 1/3. Se torna uma fração infinita 0.333333... x 3);
 
-        //Então, divisão por potência de 10 funcionará bem em um sistema decimal, garantidamente. Mas uma divisão por 3 não. Pela mesma razão, no sistema numérico binário, a divisão por potência de 2 funcionará sem dúvida, mas 1/10 se torna uma fração binária infinita.
+        //Então, uma divisão por potência de 10 funcionará bem em um sistema decimal, garantidamente. Mas uma divisão por 3 não. Pela mesma razão, no sistema numérico binário, a divisão por potência de 2 funcionará sem dúvida, mas 1/10 se torna uma fração binária infinita.
 
             //No binário, nós multiplicamos o número por dois até resultar exatamente 1:
             /* Descobrindo 0.1 binário
@@ -37,7 +37,7 @@
              * 0.2 x 2 = 0.4  (0 bit)
              * 0.4 x 2 = 0.8  (0 bit)
              * 0.8 x 2 = 1.6  (1 bit, sobra 0.6)
-             * 0.6 x 2 = 1.2  (1 bit, sobra 0.2) !! OPA, voltamos aou 0.2 novamente
+             * 0.6 x 2 = 1.2  (1 bit, sobra 0.2) !! OPA, voltamos ao 0.2 novamente
              * 
              * repetição
              * 0.2 x 2 = 0.4  (0 bit)
@@ -70,7 +70,7 @@
             let soma = 0.1 + 0.2;
             console.log(soma.toFixed(2)); //0.30
 
-        //Por favornote que o 'toFixed' sempre retorna uma string. Isso garante que tenha 2 dígitos após o "ponto" decimal. Isso é na verdade conveniente se temos um e-shop e precisamos mostrar $0.30. Para outros casos, podemos usar o '+' unário para convertê-lo em número.
+        //Por favor note que o 'toFixed' sempre retorna uma string. Isso garante que tenha 2 dígitos após o "ponto" decimal. Isso é, na verdade, conveniente se temos um e-shop e precisamos mostrar $0.30. Para outros casos, podemos usar o '+' unário para convertê-lo em número.
 
             soma = 0.1 + 0.2;
             console.log(+soma.toFixed(2)); //0.3

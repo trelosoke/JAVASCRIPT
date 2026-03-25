@@ -11,4 +11,4 @@
         console.log(a === b); //true
 
 
-    //Há apenas 3 sistemas numéricos com tal suporte. Para outros, devemos utilizar a função 'parseInt' (que será abordade mais para frente nesse capítulo).
+    //Há apenas 3 sistemas numéricos com tal suporte. Para outros, devemos utilizar a função 'parseInt' (que será abordado mais para frente nesse capítulo).
