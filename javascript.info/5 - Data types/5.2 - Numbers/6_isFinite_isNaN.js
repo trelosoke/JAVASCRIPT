@@ -57,7 +57,9 @@
                 //Comparação com 'Object.is'
                     //Há um método nativo (build-in) especial 'Object.is' que compara valores assim como '===', mas é mais confiável para dois casos extremos:
                         // 1. Funciona com NaN: 'Object.is(NaN, NaN) === true', isso é algo bom.
+                            console.log(Object.is(NaN, NaN));
                         // 2. Valores 0 e -0 são diferentes: 'Object.is(0, -0) === false', tecnicamente isso está correto, pois internamente o número tem um único bit que deve ser diferente mesmo se todos os bit são zeros.
+                            console.log(Object.is(0, -0));
 
                     //Em todos os outros casos, 'Object.is(a, b)' é o mesmo que 'a === b'. 
 
