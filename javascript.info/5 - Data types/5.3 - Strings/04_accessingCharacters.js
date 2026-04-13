@@ -1,6 +1,6 @@
 'use strict';
 //Acessando caracteres
-    //Para obter um caractere na posição 'pos', user colchetes '[pos]' ou chame o método 'str.at(pos)'. O primeiro caractere começa na posição '0':
+    //Para obter um caractere na posição 'pos', use colchetes '[pos]' ou chame o método 'str.at(pos)'. O primeiro caractere começa na posição '0':
         let str = `Hello`;
 
         //o primeiro caractere
