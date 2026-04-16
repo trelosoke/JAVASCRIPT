@@ -131,6 +131,8 @@
 
         //Como esse tempo cresce logaritcamente, conforme o tamanho da entrada, essa busca é muito eficiente para quando se mexe com um grande conjunto de dados.
 
+        //!-- Para aprofundamento de árvore binária, vá para '02_binaryTree.js'
+
     //Curiosidades
         //O "O" em Big O significa "Ordem de". Significa que queremos saber a Ordem de crescimento de um algoritmo.
 
