@@ -33,3 +33,5 @@
     //Então como comparar arrays?
 
     //Isso é simples: não use o operador '=='. Ao invés disso, compare-os item por item em um loop ou usando métodos de iteração explicados no próximo capítulo.
+
+    //Recomendo que, após o término desse capítulo, dê uma olhada em "0 - Extra\Algoritmos\01_bigOnotation.js" para entender melhor sobre matrizes e algoritmos. Isso é importante para o pensar lógico do programador. Saber se algoritmo A funciona para tal caso, etc.
