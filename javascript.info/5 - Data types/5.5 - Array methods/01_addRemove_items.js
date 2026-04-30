@@ -80,3 +80,33 @@
 
                             //é como se ele "empurasse" o último elemento para a direita para adicionar
                             console.log(arr); //[ 1, 2, 3, 4, 5 ]
+
+                                    
+        //slice
+            //O método 'slice' é bem mais simples que o seu de escrita semelhante 'splice'.
+
+            //A sintaxe é:
+                arr.slice(/*[começo], [final]*/);
+
+            //Ele retorna um novo array, copiando para ele todos os itens a partir do índice 'começo' até 'final' (sem incluir 'final'). Ambos 'start' e 'final' podem ser negativos, assumindo a posição final do array.
+
+            //É similar ao método de string 'slice', mas ao invés de sub-strings, faz sub-arrays.
+
+            //Por exemplo:
+                arr = ["t", "e", "s", "t"];
+
+                console.log(arr.slice(1, 3)); //[ 'e', 's' ]
+
+                console.log(arr.slice(-1)); //[ 's', 't' ]
+
+            //Podemos também chamá-lo sem argumentos: 'arr.slice()' cria uma cópia de 'arr'. Isso é frequentemente utilizado para obter uma cópia para mais transformações que não devem afetar o array original:
+
+                arr = ["t", "e", "s", "t"];
+                let arrCopy = arr.slice();
+
+                console.log(arr); //[ 't', 'e', 's', 't' ]
+                console.log(arrCopy); //[ 't', 'e', 's', 't' ]
+
+                //mas como 'arr' é objeto e 'arrCopy' não...
+                console.log(arr === arrCopy); //false
+                //não se igualam
