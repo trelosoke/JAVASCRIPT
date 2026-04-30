@@ -11,6 +11,7 @@
             //Como deletar um elemento do array?
 
             //Arrays são objetos, então podemos tentar usar 'delete':
+            
                 let arr = ["I", "go", "home"];
 
                 delete arr[1]; //remove "go"
@@ -29,6 +30,7 @@
             //O método '.splice' é muito versátil para arrays, um "pau para toda obra". Pode fazer tudo: inserir, remover e substituir elementos.
 
             //A sintaxe é:
+
                 arr.splice(/*start[, númeroDeElementosADeletar, elem1, ..., elemN]*/);
 
             //Ele modifica 'arr' como meçando pelo índice 'start': remove 'deleteCount' elementos e então insere 'elem1, ..., elemN' em seus lugares. Retorna o array dos elementos removidos.
@@ -44,6 +46,7 @@
             //Fácil, certo? Começando do índice '1', removeu '1' elemento.
 
             //No próximo exemplo, removemos 3 elementos e os substituímos por outros 2:
+
                 arr = ["I", "study", "JavaScript", "right", "now"];
 
                 //remove os 3 primeiros elementos e os substitui por 2 outros
@@ -59,6 +62,7 @@
                 console.log(arr.splice(0, 2)); //[ 'I', 'study' ] <-- array dos elementos removidos
 
             //O método 'splice' também é capaz de de inserir elementos sem qualquer remoção. Para isso, precisamos definir 'deleteCount' como '0':
+
                 arr = ["I", "study", "JavaScript"];
 
                 //do índice 2
@@ -71,6 +75,7 @@
 
                     //Índices negativos permitidos
                         //Aqui e em outros métodos de array, índices negativos são permitidos. Eles especificam a posição pelo final do array:
+
                             arr = [1, 2, 5];
 
                             //do índice -1 (um passo a partir do final)
@@ -83,9 +88,10 @@
 
                                     
         //slice
-            //O método 'slice' é bem mais simples que o seu de escrita semelhante 'splice'.
+            //O método '.slice' é bem mais simples que o seu de escrita semelhante 'splice'.
 
             //A sintaxe é:
+
                 arr.slice(/*[começo], [final]*/);
 
             //Ele retorna um novo array, copiando para ele todos os itens a partir do índice 'começo' até 'final' (sem incluir 'final'). Ambos 'start' e 'final' podem ser negativos, assumindo a posição final do array.
@@ -93,6 +99,7 @@
             //É similar ao método de string 'slice', mas ao invés de sub-strings, faz sub-arrays.
 
             //Por exemplo:
+
                 arr = ["t", "e", "s", "t"];
 
                 console.log(arr.slice(1, 3)); //[ 'e', 's' ]
@@ -110,3 +117,52 @@
                 //mas como 'arr' é objeto e 'arrCopy' não...
                 console.log(arr === arrCopy); //false
                 //não se igualam
+
+        //concat
+            //O método '.concat' cria um novo array que inclui valores de outros arrays e itens adicionais.
+
+            //A sintaxe é:
+                arr.concat(/*arg1, arg2...*/);
+
+            //Ele aceita qualquer quantia de argumentos, sejam arrays ou valores.
+
+            //O resultado é um novo array contendo itens de 'arr', e então 'arg1', 'arg2', e por aí vai.
+
+            //Se um argumento 'argN' é um array, então todos os seus elementos são copiados. Do contrário, o argumento em si é copiado.
+
+            //Por exemplo:
+            
+                arr = [1, 2];
+
+                //cria um array de: 'arr' e [3, 4]
+                console.log(arr.concat([3, 4])); //[ 1, 2, 3, 4 ]
+
+                //cria um array de: 'arr' e [3, 4] e [5, 6]
+                console.log(arr.concat([3, 4], [5, 6])); //[ 1, 2, 3, 4, 5, 6 ]
+
+                //cria um array de: 'arr' e [3, 4], então adiciona os valores 5 e 6
+                console.log(arr.concat([3, 4], 5, 6)); //[ 1, 2, 3, 4, 5, 6 ]
+
+            //Normalmente ele somente copia os elementos dos arrays. Outros objetos, mesmo que se pareçam com um array, são adicionados como um todo:
+
+                arr = [1, 2];
+
+                let arrayLike = {
+                    0: "algo",
+                    length: 1,
+                };
+
+                console.log(arr.concat(arrayLike)); //[ 1, 2, { '0': 'algo', length: 1 } ]
+
+            //...Mas se um objeto "tipo array" tiver uma propriedade especial 'Symbol.isConcatSpreadable', então é tratado como um array pelo 'concat': seus elementos são adicionados:
+            
+                arr = [1, 2];
+
+                arrayLike = {
+                    0: "algo",
+                    1: "mais",
+                    [Symbol.isConcatSpreadable]: true,
+                    length: 2,
+                };
+
+                console.log(arr.concat(arrayLike)); //[ 1, 2, 'algo', 'mais' ]
