@@ -39,7 +39,7 @@ function MySet() {
 
     //esse método retornará o tamanho do set
     this.size = function() {    //size é uma propriedade
-        collection.length;
+        return collection.length;
     };
 
     //os métodos abaixo não estão no ES6
