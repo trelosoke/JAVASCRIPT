@@ -38,3 +38,55 @@
                         console.log(array.includes(NaN)); //true (correto)
 
                     //Isso porque 'includes' foi adicionado ao JavaScript muito depois e usa o algoritmo de comparação mais atualizado internamente.
+
+//'find' e 'findIndex/findLastIndex'
+    //Imagine que temos um array de objetos. Como encontramos um objeto com uma condição específica?
+
+    //Aqui o método '.find(função)' chega. A sintaxe é:
+
+        let resultado = arr.find(function(item, índice, array) {
+            //se 'true' é retornado, 'item' é retornado e a iteração para
+            //para um cenário 'falsy', retorna 'undefined'
+        });
+
+    //A função é chamada para elementos do array, um após o outro:
+        // - 'item' é o elemento;
+        // - 'índice' é o índice;
+        // - 'array' é o array em si.
+
+    //Se retorna 'true' a pesquisa é interrompida, o 'item' é retornado. Se nada é encontrado, 'undefined' é retornado.
+    
+    //Por exemplo, temos um array de usuários, cada um com os campos 'id' e 'name'. Vamos encontrar o com 'id == 1':
+
+        let users = [
+            {id: 1, name: "John"},
+            {id: 2, name: "Pete"},
+            {id: 3, name: "Mary"},
+        ];
+
+        let user1 = users.find(item => item.id === 1);
+
+        console.log(user1.name);
+
+    //Na vida real, arrays de objetos são algo comum, então o método 'find' é bem útil.
+
+    //Note que no exemplo nós fornecemos para 'find' a função 'item => item.id == 1' com um argumento. Isso é típico, outros argumentos dessa função são raramente utilizados
+
+    //O método '.findIndex' tem a mesma sintaxe, mas retorna o índice onde o elemento foi encontrado ao invés dele em si. O valor -1 é retornado caso nada for encontrado.
+
+    //O método '.findLastIndex' é como 'findIndex', mas procura da direita para a esquerda, semelhante a 'lastIndexOf'.
+
+    //Aqui está um exemplo:
+        
+        users = [
+            {id: 1, name: "John"},
+            {id: 2, name: "Pete"},
+            {id: 3, name: "Mary"},
+            {id: 4, name: "John"},
+        ];
+
+        //encontra o índice do primeiro John
+        console.log(users.findIndex(item => item.name === "John")); //0
+
+        //encontra o índice do último John
+        console.log(users.findLastIndex(item => item.name === "John")); //3
