@@ -90,3 +90,30 @@
 
         //encontra o índice do último John
         console.log(users.findLastIndex(item => item.name === "John")); //3
+
+    
+//'filter'
+    //O método 'find' procura por um único (primeiro) elemento que faz a função retornar 'true'.
+
+    //Se houver muitos, podemos usar '.filter(função)'.
+
+    //A sintaxe é semelhante a 'find', mas 'filter' retorna um array de todos os elementos correspondentes:
+
+        let resultados = arr.filter(function(item, índice, array) {
+            //se 'true', item é adicionado (push()) para 'resultados' e a iteração continua
+            //retorna um array vazio se nada é encontrado
+        });
+
+    //Por exemplo:
+        
+        users = [
+            {id: 1, name: "John"},
+            {id: 2, name: "Pete"},
+            {id: 3, name: "Mary"}
+        ];
+
+        //retorna array dos primeiros 2 usuários
+        let someUsers = users.filter(item => item.id < 3);
+
+        console.log(someUsers); //[ { id: 1, name: 'John' }, { id: 2, name: 'Pete' } ]
+        console.log(someUsers.length); //2
