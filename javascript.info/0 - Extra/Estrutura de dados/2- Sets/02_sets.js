@@ -69,8 +69,9 @@ function MySet() {
             if (otherSet.has(elem)) {
                 intersectionSet.add(elem);
             }
-            return intersectionSet;
-        })
+        });
+
+        return intersectionSet;
     };
 
     //esse método retorna a diferença de dois sets como um novo set
@@ -81,8 +82,9 @@ function MySet() {
             if (!otherSet.has(elem)) {
                 differenceSet.add(elem);
             }
-            return differenceSet;
-        })
+        });
+
+        return differenceSet;
     };
 
     //esse método testa se um set é um subset ou um set diferente
