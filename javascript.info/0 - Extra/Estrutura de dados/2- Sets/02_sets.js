@@ -29,7 +29,7 @@ function MySet() {
 
     //esse método removerá um elemento do set
     this.remove = function(element) {   //no JS, é '.delete'
-        if (!this.has(element)) {
+        if (this.has(element)) {
             let index = collection.indexOf(element);
             collection.splice(index, 1);
             return true;
