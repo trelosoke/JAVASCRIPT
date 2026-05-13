@@ -117,3 +117,16 @@
                                 console.log( countries.sort( (a, b) => a > b ? 1 : -1 ) ); //[ 'Andorra', 'Vietnam', 'Österreich' ] (errado)
 
                                 console.log( countries.sort( (a, b) => a.localeCompare(b) ) ); //[ 'Andorra', 'Österreich', 'Vietnam' ]
+
+//reverse
+    //O método '.reverse' inverte a ordem dos elementos do array, substituindo os valores do original:
+
+        arr = [1, 2, 3, 4, 5];
+        arr.reverse();
+
+        console.log(arr); //[ 5, 4, 3, 2, 1 ]
+
+    //Também retorna o array depois da inversão.
+
+        arr = [1, 2, 3, 4, 5];
+        console.log(arr.reverse()); //[ 5, 4, 3, 2, 1 ]
