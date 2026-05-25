@@ -44,9 +44,35 @@ function generateSlug(title = '') {
     return slug.split(' ').filter(word => word !== '').join('-');
 }
 
+function generateSlugAlt(title = '') {
+    if (typeof title !== 'string') {
+        throw TypeError('parameter 1 must be a string');
+    }
+    
+    if (title === '') {
+        return '';
+    }
+
+    let slug = title.trim().toLowerCase().split(' ').filter(word => word !== '');
+    const symbols = ['!', '&', '#', '@', '*', '$', '%', '(', ')','[',']', '{', '}', '^', '~', ',', '.', ',', ';', ':', '/', '\\', '?', 'º', 'ª', '|', '-'];
+
+    slug = slug.map(word => {
+        for (let symbol of symbols) {
+            if (word.includes(symbol)){
+                word = word.replaceAll(symbol, '');
+            }
+        }
+        return word;
+    }); 
+
+    return slug.join('-');
+}
+
+console.log(generateSlugAlt("O QUE É HTML?"));
+
 //Testes:
-console.log(generateSlug("10 Dicas de JavaScript!"));       // "10-dicas-de-javascript"
-console.log(generateSlug("   O que é HTML?   "));           // "o-que-é-html"
-console.log(generateSlug("Mãe & Filho (Lançamento)"));      // "mãe--filho-lançamento"
-console.log(generateSlug("---Espaços e Hífens---"));        // "espaços-e-hífens"
-console.log(generateSlug("aaa       s"));                               // ""
+// console.log(generateSlug("10 Dicas de JavaScript!"));       // "10-dicas-de-javascript"
+// console.log(generateSlug("   O que é HTML?   "));           // "o-que-é-html"
+// console.log(generateSlug("Mãe & Filho (Lançamento)"));      // "mãe--filho-lançamento"
+// console.log(generateSlug("---Espaços e Hífens---"));        // "espaços-e-hífens"
+// console.log(generateSlug("aaa       s"));                               // ""
