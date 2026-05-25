@@ -71,8 +71,8 @@ function generateSlugAlt(title = '') {
 console.log(generateSlugAlt("O QUE É HTML?"));
 
 //Testes:
-// console.log(generateSlug("10 Dicas de JavaScript!"));       // "10-dicas-de-javascript"
-// console.log(generateSlug("   O que é HTML?   "));           // "o-que-é-html"
-// console.log(generateSlug("Mãe & Filho (Lançamento)"));      // "mãe--filho-lançamento"
-// console.log(generateSlug("---Espaços e Hífens---"));        // "espaços-e-hífens"
-// console.log(generateSlug("aaa       s"));                               // ""
+console.log(generateSlug("10 Dicas de JavaScript!"));       // "10-dicas-de-javascript"
+console.log(generateSlug("   O que é HTML?   "));           // "o-que-é-html"
+console.log(generateSlug("Mãe & Filho (Lançamento)"));      // "mãe--filho-lançamento"
+console.log(generateSlug("---Espaços e Hífens---"));        // "espaços-e-hífens"
+console.log(generateSlug("aaa       s"));                               // ""
